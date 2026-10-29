@@ -52,9 +52,8 @@ I architect high-performance web systems, cloud infrastructure and intelligent s
 
 ## Most Working Time
 
-<p align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/wakatime?username=akhil-nasim&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff&langs_count=5&custom_title=WakaTime%20Stats%20(last%207%20days)" alt="WakaTime stats - most working time by language"/>
-</p>
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
 ---
  
