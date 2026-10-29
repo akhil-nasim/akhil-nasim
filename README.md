@@ -50,12 +50,6 @@ I architect high-performance web systems, cloud infrastructure and intelligent s
 
 ---
 
-## Most Working Time
-
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
-
----
  
 <p align="center">
   <a href="https://buymeacoffee.com/akhilnasimt"><img src="https://img.shields.io/badge/Buy_Me_a_Coffee-111827?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee"/></a>
