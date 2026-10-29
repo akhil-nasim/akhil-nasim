@@ -49,6 +49,14 @@ I architect high-performance web systems, cloud infrastructure and intelligent s
 </p>
 
 ---
+
+## Most Working Time
+
+<p align="center">
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/wakatime?username=akhil-nasim&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff&langs_count=5&custom_title=WakaTime%20Stats%20(last%207%20days)" alt="WakaTime stats - most working time by language"/>
+</p>
+
+---
  
 <p align="center">
   <a href="https://buymeacoffee.com/akhilnasimt"><img src="https://img.shields.io/badge/Buy_Me_a_Coffee-111827?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee"/></a>
