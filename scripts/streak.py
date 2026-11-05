@@ -151,19 +151,19 @@ def render_extra(s: dict) -> str:
     for i, (label, value, sub) in enumerate(columns):
         x = 82.5 + i * 165
         cells.append(
-            f'  <text x="{x}" y="58" class="num" fill="{TEXT}" text-anchor="middle">{value}</text>\n'
-            f'  <text x="{x}" y="88" class="label" fill="{ACCENT}" text-anchor="middle">{label}</text>\n'
-            f'  <text x="{x}" y="108" class="date" text-anchor="middle">{sub}</text>'
+            f'  <text x="{x}" y="88" class="num" fill="{TEXT}" text-anchor="middle">{value}</text>\n'
+            f'  <text x="{x}" y="118" class="label" fill="{ACCENT}" text-anchor="middle">{label}</text>\n'
+            f'  <text x="{x}" y="138" class="date" text-anchor="middle">{sub}</text>'
         )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="495" height="135" viewBox="0 0 495 135">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195">
   <style>
     .num {{ font: 700 28px {font}; }}
     .label {{ font: 600 14px {font}; }}
     .date {{ font: 400 12px {font}; fill: {MUTED}; }}
   </style>
-  <rect width="495" height="135" rx="4.5" fill="{BG}"/>
-  <line x1="165" y1="24" x2="165" y2="111" stroke="{DIVIDER}"/>
-  <line x1="330" y1="24" x2="330" y2="111" stroke="{DIVIDER}"/>
+  <rect width="495" height="195" rx="4.5" fill="{BG}"/>
+  <line x1="165" y1="28" x2="165" y2="167" stroke="{DIVIDER}"/>
+  <line x1="330" y1="28" x2="330" y2="167" stroke="{DIVIDER}"/>
 {chr(10).join(cells)}
 </svg>
 """

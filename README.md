@@ -49,8 +49,8 @@ I architect high-performance web systems, cloud infrastructure and intelligent s
 </p>
 
 <p align="center">
-  <img src="assets/streak.svg" alt="GitHub streak"/>
-  <img src="assets/extra-stats.svg" alt="Extra GitHub stats"/>
+  <img width="49%" src="assets/streak.svg" alt="GitHub streak"/>
+  <img width="49%" src="assets/extra-stats.svg" alt="Extra GitHub stats"/>
 </p>
 
 ---
