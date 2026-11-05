@@ -49,7 +49,8 @@ I architect high-performance web systems, cloud infrastructure and intelligent s
 </p>
 
 <p align="center">
-  <a href="https://github-streak-bijay-shre-stha.vercel.app/akhil-nasim"><img src="https://github-streak-bijay-shre-stha.vercel.app/api/streak-image?username=akhil-nasim&theme=default" alt="GitHub Streak"/></a>
+  <img src="assets/streak.svg" alt="GitHub streak"/>
+  <img src="assets/extra-stats.svg" alt="Extra GitHub stats"/>
 </p>
 
 ---

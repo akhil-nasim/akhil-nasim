@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="135" viewBox="0 0 495 135">
+  <style>
+    .num { font: 700 28px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; }
+    .label { font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; }
+    .date { font: 400 12px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #8b949e; }
+  </style>
+  <rect width="495" height="135" rx="4.5" fill="#0d1117"/>
+  <line x1="165" y1="24" x2="165" y2="111" stroke="#30363d"/>
+  <line x1="330" y1="24" x2="330" y2="111" stroke="#30363d"/>
+  <text x="82.5" y="58" class="num" fill="#c9d1d9" text-anchor="middle">466</text>
+  <text x="82.5" y="88" class="label" fill="#58a6ff" text-anchor="middle">Active Days</text>
+  <text x="82.5" y="108" class="date" text-anchor="middle">since Aug 2, 2022</text>
+  <text x="247.5" y="58" class="num" fill="#c9d1d9" text-anchor="middle">1.8</text>
+  <text x="247.5" y="88" class="label" fill="#58a6ff" text-anchor="middle">Average / Day</text>
+  <text x="247.5" y="108" class="date" text-anchor="middle">contributions</text>
+  <text x="412.5" y="58" class="num" fill="#c9d1d9" text-anchor="middle">62</text>
+  <text x="412.5" y="88" class="label" fill="#58a6ff" text-anchor="middle">Best Day</text>
+  <text x="412.5" y="108" class="date" text-anchor="middle">Nov 4, 2026</text>
+</svg>
