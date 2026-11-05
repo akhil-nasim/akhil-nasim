@@ -18,7 +18,6 @@ BG = "#0d1117"
 ACCENT = "#58a6ff"
 TEXT = "#c9d1d9"
 MUTED = "#8b949e"
-DIVIDER = "#30363d"
 
 
 def graphql(query: str, variables: dict) -> dict:
@@ -106,67 +105,68 @@ def span(length: int, start: date, end: date) -> str:
     return fmt(start) if start == end else f"{fmt(start)} - {fmt(end)}"
 
 
+FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif"
+
+
+def card(title: str, columns: list[tuple[str, str, str]], ring: int | None = None) -> str:
+    """A 495x195 card laid out like the github-readme-stats cards: title top-left, three columns."""
+    cells = []
+    for i, (value, label, sub) in enumerate(columns):
+        x = 82.5 + i * 165
+        if i == ring:
+            cells.append(
+                f'  <g transform="translate({x}, 98)">\n'
+                f'    <circle r="30" stroke="{ACCENT}" stroke-opacity="0.2" stroke-width="5"/>\n'
+                f'    <circle r="30" stroke="{ACCENT}" stroke-width="5" stroke-dasharray="160 28.5"'
+                f' stroke-linecap="round" transform="rotate(-62)"/>\n'
+                f'    <path d="M0 -42 c3 4 6 7 6 11 a6 6 0 0 1 -12 0 c0 -3 1.5 -5 3 -7'
+                f' c0 2 1.5 4 3 4 c0 -3 -1.5 -5 0 -8z" fill="{ACCENT}"/>\n'
+                f'    <text y="8" class="num" text-anchor="middle">{value}</text>\n'
+                f"  </g>"
+            )
+        else:
+            cells.append(f'  <text x="{x}" y="107" class="num" text-anchor="middle">{value}</text>')
+        cells.append(f'  <text x="{x}" y="150" class="label" text-anchor="middle">{label}</text>')
+        cells.append(f'  <text x="{x}" y="170" class="sub" text-anchor="middle">{sub}</text>')
+    body = "\n".join(cells)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none">
+  <style>
+    .header {{ font: 600 18px {FONT}; fill: {ACCENT}; }}
+    .num {{ font: 800 24px {FONT}; fill: {TEXT}; }}
+    .label {{ font: 600 14px {FONT}; fill: {TEXT}; }}
+    .sub {{ font: 400 12px {FONT}; fill: {MUTED}; }}
+  </style>
+  <rect x="0.5" y="0.5" width="494" height="194" rx="4.5" fill="{BG}"/>
+  <text x="25" y="35" class="header">{title}</text>
+{body}
+</svg>
+"""
+
+
 def render(s: dict) -> str:
     cur_len, cur_start, cur_end = s["current"]
     long_len, long_start, long_end = s["longest"]
-    font = "'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif"
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195">
-  <style>
-    .num {{ font: 700 28px {font}; }}
-    .label {{ font: 600 14px {font}; }}
-    .date {{ font: 400 12px {font}; fill: {MUTED}; }}
-  </style>
-  <rect width="495" height="195" rx="4.5" fill="{BG}"/>
-  <line x1="165" y1="28" x2="165" y2="167" stroke="{DIVIDER}"/>
-  <line x1="330" y1="28" x2="330" y2="167" stroke="{DIVIDER}"/>
-
-  <text x="82.5" y="79" class="num" fill="{TEXT}" text-anchor="middle">{s["total"]:,}</text>
-  <text x="82.5" y="115" class="label" fill="{TEXT}" text-anchor="middle">Total Contributions</text>
-  <text x="82.5" y="137" class="date" text-anchor="middle">{fmt(s["first"])} - Present</text>
-
-  <g transform="translate(247.5, 71)">
-    <circle r="40" fill="none" stroke="{ACCENT}" stroke-width="5" stroke-dasharray="226 25.3" transform="rotate(-72)" stroke-linecap="round"/>
-    <path d="M0 -55 c4 5 8 9 8 15 a8 8 0 0 1 -16 0 c0 -4 2 -7 4 -9 c0 3 2 5 4 5 c0 -4 -2 -7 0 -11z" fill="{ACCENT}"/>
-    <text y="10" class="num" fill="{TEXT}" text-anchor="middle">{cur_len}</text>
-  </g>
-  <text x="247.5" y="140" class="label" fill="{ACCENT}" text-anchor="middle">Current Streak</text>
-  <text x="247.5" y="160" class="date" text-anchor="middle">{span(cur_len, cur_start, cur_end)}</text>
-
-  <text x="412.5" y="79" class="num" fill="{TEXT}" text-anchor="middle">{long_len}</text>
-  <text x="412.5" y="115" class="label" fill="{TEXT}" text-anchor="middle">Longest Streak</text>
-  <text x="412.5" y="137" class="date" text-anchor="middle">{span(long_len, long_start, long_end)}</text>
-</svg>
-"""
+    return card(
+        "My Contribution Streak",
+        [
+            (f"{s['total']:,}", "Total Contributions", f"{fmt(s['first'])} - Present"),
+            (str(cur_len), "Current Streak", span(cur_len, cur_start, cur_end)),
+            (str(long_len), "Longest Streak", span(long_len, long_start, long_end)),
+        ],
+        ring=1,
+    )
 
 
 def render_extra(s: dict) -> str:
     best_count, best_day = s["best"]
-    font = "'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif"
-    columns = [
-        ("Active Days", f"{s['active']:,}", f"since {fmt(s['first'])}"),
-        ("Average / Day", f"{s['average']:.1f}", "contributions"),
-        ("Best Day", f"{best_count:,}", fmt(best_day)),
-    ]
-    cells = []
-    for i, (label, value, sub) in enumerate(columns):
-        x = 82.5 + i * 165
-        cells.append(
-            f'  <text x="{x}" y="88" class="num" fill="{TEXT}" text-anchor="middle">{value}</text>\n'
-            f'  <text x="{x}" y="118" class="label" fill="{ACCENT}" text-anchor="middle">{label}</text>\n'
-            f'  <text x="{x}" y="138" class="date" text-anchor="middle">{sub}</text>'
-        )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195">
-  <style>
-    .num {{ font: 700 28px {font}; }}
-    .label {{ font: 600 14px {font}; }}
-    .date {{ font: 400 12px {font}; fill: {MUTED}; }}
-  </style>
-  <rect width="495" height="195" rx="4.5" fill="{BG}"/>
-  <line x1="165" y1="28" x2="165" y2="167" stroke="{DIVIDER}"/>
-  <line x1="330" y1="28" x2="330" y2="167" stroke="{DIVIDER}"/>
-{chr(10).join(cells)}
-</svg>
-"""
+    return card(
+        "My Activity",
+        [
+            (f"{s['active']:,}", "Active Days", f"since {fmt(s['first'])}"),
+            (f"{s['average']:.1f}", "Average / Day", "contributions"),
+            (f"{best_count:,}", "Best Day", fmt(best_day)),
+        ],
+    )
 
 
 if __name__ == "__main__":

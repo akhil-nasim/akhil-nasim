@@ -1,26 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195">
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none">
   <style>
-    .num { font: 700 28px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; }
-    .label { font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; }
-    .date { font: 400 12px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #8b949e; }
+    .header { font: 600 18px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #58a6ff; }
+    .num { font: 800 24px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #c9d1d9; }
+    .label { font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #c9d1d9; }
+    .sub { font: 400 12px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #8b949e; }
   </style>
-  <rect width="495" height="195" rx="4.5" fill="#0d1117"/>
-  <line x1="165" y1="28" x2="165" y2="167" stroke="#30363d"/>
-  <line x1="330" y1="28" x2="330" y2="167" stroke="#30363d"/>
-
-  <text x="82.5" y="79" class="num" fill="#c9d1d9" text-anchor="middle">2,837</text>
-  <text x="82.5" y="115" class="label" fill="#c9d1d9" text-anchor="middle">Total Contributions</text>
-  <text x="82.5" y="137" class="date" text-anchor="middle">Aug 2, 2022 - Present</text>
-
-  <g transform="translate(247.5, 71)">
-    <circle r="40" fill="none" stroke="#58a6ff" stroke-width="5" stroke-dasharray="226 25.3" transform="rotate(-72)" stroke-linecap="round"/>
-    <path d="M0 -55 c4 5 8 9 8 15 a8 8 0 0 1 -16 0 c0 -4 2 -7 4 -9 c0 3 2 5 4 5 c0 -4 -2 -7 0 -11z" fill="#58a6ff"/>
-    <text y="10" class="num" fill="#c9d1d9" text-anchor="middle">11</text>
+  <rect x="0.5" y="0.5" width="494" height="194" rx="4.5" fill="#0d1117"/>
+  <text x="25" y="35" class="header">My Contribution Streak</text>
+  <text x="82.5" y="107" class="num" text-anchor="middle">2,837</text>
+  <text x="82.5" y="150" class="label" text-anchor="middle">Total Contributions</text>
+  <text x="82.5" y="170" class="sub" text-anchor="middle">Aug 2, 2022 - Present</text>
+  <g transform="translate(247.5, 98)">
+    <circle r="30" stroke="#58a6ff" stroke-opacity="0.2" stroke-width="5"/>
+    <circle r="30" stroke="#58a6ff" stroke-width="5" stroke-dasharray="160 28.5" stroke-linecap="round" transform="rotate(-62)"/>
+    <path d="M0 -42 c3 4 6 7 6 11 a6 6 0 0 1 -12 0 c0 -3 1.5 -5 3 -7 c0 2 1.5 4 3 4 c0 -3 -1.5 -5 0 -8z" fill="#58a6ff"/>
+    <text y="8" class="num" text-anchor="middle">11</text>
   </g>
-  <text x="247.5" y="140" class="label" fill="#58a6ff" text-anchor="middle">Current Streak</text>
-  <text x="247.5" y="160" class="date" text-anchor="middle">Oct 26, 2026 - Nov 5, 2026</text>
-
-  <text x="412.5" y="79" class="num" fill="#c9d1d9" text-anchor="middle">31</text>
-  <text x="412.5" y="115" class="label" fill="#c9d1d9" text-anchor="middle">Longest Streak</text>
-  <text x="412.5" y="137" class="date" text-anchor="middle">Feb 16, 2026 - Mar 18, 2026</text>
+  <text x="247.5" y="150" class="label" text-anchor="middle">Current Streak</text>
+  <text x="247.5" y="170" class="sub" text-anchor="middle">Oct 26, 2026 - Nov 5, 2026</text>
+  <text x="412.5" y="107" class="num" text-anchor="middle">31</text>
+  <text x="412.5" y="150" class="label" text-anchor="middle">Longest Streak</text>
+  <text x="412.5" y="170" class="sub" text-anchor="middle">Feb 16, 2026 - Mar 18, 2026</text>
 </svg>
