@@ -48,6 +48,10 @@ I architect high-performance web systems, cloud infrastructure and intelligent s
   <img height="165" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=akhil-nasim&layout=compact&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top languages"/>
 </p>
 
+<p align="center">
+  <a href="https://github-streak-bijay-shre-stha.vercel.app/akhil-nasim"><img src="https://github-streak-bijay-shre-stha.vercel.app/api/streak-image?username=akhil-nasim&theme=default" alt="GitHub Streak"/></a>
+</p>
+
 ---
 
  
