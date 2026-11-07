@@ -7,7 +7,7 @@
   </style>
   <rect x="0.5" y="0.5" width="494" height="194" rx="4.5" fill="#0d1117"/>
   <text x="25" y="35" class="header">My Activity</text>
-  <text x="82.5" y="107" class="num" text-anchor="middle">469</text>
+  <text x="82.5" y="107" class="num" text-anchor="middle">470</text>
   <text x="82.5" y="150" class="label" text-anchor="middle">Active Days</text>
   <text x="82.5" y="170" class="sub" text-anchor="middle">since Aug 2, 2022</text>
   <text x="247.5" y="107" class="num" text-anchor="middle">1.9</text>
