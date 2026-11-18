@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>Full Stack Engineer</b> · Web Systems · Cloud · Generative AI
-</p>
+</p> 
 
 <p align="center">
   <a href="https://akhilnasim.com"><img src="https://img.shields.io/badge/Website-111827?style=flat-square&logo=googlechrome&logoColor=white" alt="Website"/></a>
