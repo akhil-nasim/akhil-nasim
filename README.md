@@ -28,7 +28,7 @@ I architect high-performance web systems, cloud infrastructure and intelligent s
 
 ## Tech Stack
 
-| | |
+| | 
 |---|---|
 | **Languages** | ![C](https://img.shields.io/badge/C-111827?style=flat-square&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/C++-111827?style=flat-square&logo=cplusplus&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-111827?style=flat-square&logo=javascript&logoColor=F7DF1E) ![Python](https://img.shields.io/badge/Python-111827?style=flat-square&logo=python&logoColor=3776AB) ![Dart](https://img.shields.io/badge/Dart-111827?style=flat-square&logo=dart&logoColor=0175C2) ![PHP](https://img.shields.io/badge/PHP-111827?style=flat-square&logo=php&logoColor=777BB4) |
 | **Frontend** | ![React](https://img.shields.io/badge/React-111827?style=flat-square&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-111827?style=flat-square&logo=nextdotjs&logoColor=white) ![Vue](https://img.shields.io/badge/Vue.js-111827?style=flat-square&logo=vuedotjs&logoColor=4FC08D) ![Redux](https://img.shields.io/badge/Redux-111827?style=flat-square&logo=redux&logoColor=764ABC) ![Tailwind](https://img.shields.io/badge/Tailwind-111827?style=flat-square&logo=tailwindcss&logoColor=38B2AC) ![Bootstrap](https://img.shields.io/badge/Bootstrap-111827?style=flat-square&logo=bootstrap&logoColor=7952B3) ![GSAP](https://img.shields.io/badge/GSAP-111827?style=flat-square&logo=greensock&logoColor=88CE02) |
